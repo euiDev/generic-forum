@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "generic-forum"
+    }
+  },
+  "defaultProject": "generic-forum",
+  "cli": {
+    "analytics": false
+  }
 }

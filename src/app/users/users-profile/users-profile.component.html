@@ -1,0 +1,10 @@
+<ng-container *ngFor="let userData of user$ | async">
+  <div class="card" *ngIf="userData">
+    <div class="card-content">
+      <div class="media-content">
+        <p class="title is-2">{{ userData?.name }} [{{ userData?.id }}]</p>
+        <p class="subtitle is-6">{{ userData?.email }}</p>
+      </div>
+    </div>
+  </div>
+</ng-container>

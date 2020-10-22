@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users$ | async">
+      <td>{{ user.id }}</td>
+      <td>
+        <a [routerLink]="['profile/', user.id]">{{ user.name }}</a>
+      </td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </tbody>
+</table>

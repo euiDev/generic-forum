@@ -1,0 +1,16 @@
+<label class="label">Sign up new user</label>
+<form [formGroup]="userSignUpForm" (ngSubmit)="onSubmit()">
+  <app-input *ngFor="let formControl of formGroupBuilder"
+             [label]="formControl.label"
+             [placeholder]="formControl.placeholder"
+             [type]="formControl.type"
+             [control]="userSignUpForm.get(formControl.value)"></app-input>
+  <div class="field is-grouped">
+    <div class="control">
+      <button class="button is-success" type="submit" [disabled]="userSignUpForm.invalid" >Submit</button>
+    </div>
+    <div class="control">
+      <button class="button is-warning" type="button" (click)="onClickReset()">Reset</button>
+    </div>
+  </div>
+</form>
